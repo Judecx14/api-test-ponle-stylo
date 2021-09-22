@@ -29,9 +29,14 @@ export default class User extends BaseModel {
   }
 
   @column() 
-  public profilePhoto: string
-  
+  public role: string
 
+  @column() 
+  public profilePhoto: string
+
+  @column() 
+  public validate: boolean
+  
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 

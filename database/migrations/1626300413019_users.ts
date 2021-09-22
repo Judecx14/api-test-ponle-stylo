@@ -11,7 +11,9 @@ export default class Users extends BaseSchema {
       //table.string('username', 25).notNullable().unique()
       table.string('email', 255).notNullable().unique()
       table.string('password', 180).notNullable()
-      table.string('profile_photo').nullable()
+      table.string('role', 10)
+      table.string('profile_photo').nullable(),
+      table.boolean('validate').notNullable()
       table.timestamps(true, true )
     })
   }
